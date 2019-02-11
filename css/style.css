@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+/*=============================================
+=                  REUSABLES                 =
+=============================================*/
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.btn {
+  border: 1px solid #fff;
+  display: inline-block;
+  padding: 2rem 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .4s;
+}
+
+.btn--orange {
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #b55400 50%);
+  background-size: 300%;
+  color: #fff;
+}
+
+.btn--orange:hover {
+  background-position: 100%;
+}
+
+.btn--social {
+  color: #fff;
+  font-size: 3rem;
+}
+
+/*=============================================
+=                  HEADER                    =
+=============================================*/
+
+.header {
+  background: #222831;
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+.header__box {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+.header__title {
+  font-size: 5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.header__text {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.header__buttons {
+  margin-top: 5rem;
+}
+
+.header__buttons .btn:not(:last-child) {
+  margin-right: 1rem;
+}
+
+/*=============================================
+=              PORTFOLIO SECTION              =
+=============================================*/
+
+.portfolio-section {
+  padding: 10rem 0;
+}
+
+.portfolio-section__title {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.portfolio-section__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portfolio-section__item {
+  flex: 0 1 45%;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.portfolio-section__item:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* OVERLAY */
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .3s;
+}
+
+.overlay__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+}
+
+.overlay__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overlay__info-box {
+  margin-top: 3rem;
+}
+
+.overlay__title {
+  text-align: center;
+}
+
+.overlay__text {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/*=============================================
+=               SECTION SKILLS              =
+=============================================*/
+
+.section-skills {
+  background-color: #eeeeee;
+  padding: 10rem 0;
+}
+
+.section-skills__title {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.section-skills__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.skill-img {
+  display: inline-block;
+  height: 60px;
+}
+
+.section-skills__text {
+  color: #393e46;
+  margin-top: 6rem;
+  text-align: center;
+}
+
+/*=============================================
+=               SECTION CONTACT              =
+=============================================*/
+
+.section-contact {
+  background-color: #393e46;
+  color: #fff;
+  padding: 10rem 0;
+}
+
+.section-contact__title {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.contact-box {
+  text-align: center;
+}
+
+.contact-link {
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #b55400 50%);
+  background-size: 250%;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 3rem;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  padding: 3rem;
+  position: relative;
+  transition: all .3s;
+}
+
+.contact-link:hover {
+  background-position: 100%;
+  border-color: #b55400;
+}
+
+.contact-link:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.contact-link i {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*=============================================
+=               FOOTER                      =
+=============================================*/
+
+.footer {
+  background-color: #222831;
+  padding: 3em 0;
+}
+
+.copy {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.copy i {
+  color: #e31b23;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+/*=============================================
+=               BREAKPOIINTS                  =
+=============================================*/
+
+@media(max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    padding: 0 5%;
+  }
+
+  /* HEADER */
+  .header__box {
+    width: 80%;
+  }
+
+  .header__title {
+    font-size: 4rem;
+  }
+
+  .header__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 4rem auto;
+  }
+
+  .header__buttons .btn:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  /* PORTFOLIO */
+
+  .portfolio-section__box {
+    flex-direction: column;
+  }
+
+  /* SECTION SKILLS */
+  .section-skills__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .skill-img {
+    display: inline-block;
+    height: 40px;
+  }
+}
